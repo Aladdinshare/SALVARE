@@ -5,6 +5,7 @@
     "test": "hardhat test",
     "deploy:none": "yarn clean && yarn compile && yarn test && hardhat run scripts/deploy.js",
     "deploy:testnet": "yarn clean && yarn compile && yarn test && hardhat run scripts/deploy.js --network mumbai",
+    "deployNFT:none": "yarn clean && yarn compile && yarn test test/salvareNft.test.js && hardhat run scripts/deployNFT.js",
     "deployNFT:testnet": "yarn clean && yarn compile && yarn test test/salvareNft.test.js && hardhat run scripts/deployNFT.js --network mumbai",
     "premove-abi": "npx hardhat clean && npx hardhat compile",
     "move-abi": "cp -rf artifacts/contracts/SALVARE.sol/SALVARE.json ../salvare/src/contract/salvare_abi.json",
