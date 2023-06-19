@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { chainId } from "./config";
 
 const Modal_change_network = (props) => {

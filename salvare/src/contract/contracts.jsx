@@ -17,7 +17,9 @@ const SALVARE_Contract = new ethers.Contract(
 );
 
 class Contracts_MetaMask {
+
   async get_chain_id() {
+
     const chainId = await provider.getNetwork();
 
     return chainId["chainId"];
