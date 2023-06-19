@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }) {
   }, [cont])
 
   return (
-    <div style={{ minHeight: pageHeight, height: "100vh" }}>
+    <div style={{ minHeight: pageHeight, height: "100vh"}}>
       <Sign />
       <AppProvider>
         <Component {...pageProps}/>

@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useAppContext } from '../src/context/AppContext';
+// import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
+// import 'leaflet-routing-machine';
 import dynamic from 'next/dynamic';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
-// const MapContainer = dynamic(() => import('react-leaflet').then((mod) => mod.MapContainer), {
-//   ssr: false, // サーバーサイドレンダリングを無効化
-// });
-// const TileLayer = dynamic(() => import('react-leaflet').then((mod) => mod.TileLayer), {
-//   ssr: false, // サーバーサイドレンダリングを無効化
-// });
-// const Marker = dynamic(() => import('react-leaflet').then((mod) => mod.Marker), {
-//   ssr: false, // サーバーサイドレンダリングを無効化
-// });
+
+const MapContainer = dynamic(() => import('react-leaflet').then((mod) => mod.MapContainer), {
+  ssr: false, // サーバーサイドレンダリングを無効化
+});
+const TileLayer = dynamic(() => import('react-leaflet').then((mod) => mod.TileLayer), {
+  ssr: false, // サーバーサイドレンダリングを無効化
+});
+const Marker = dynamic(() => import('react-leaflet').then((mod) => mod.Marker), {
+  ssr: false, // サーバーサイドレンダリングを無効化
+});
 
 // import PopupContent from './PopupContent';
 // import WorkingContent from './WorkingContent';
@@ -20,13 +22,17 @@ const ShowPins = () => {
 
   }, []);
   return (<>
-      <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '400px', width: '100%' }}>
+      <MapContainer
+        center={[51.505, -0.09]}
+        zoom={16}
+        style={{ height: '100vh', width: '100%' }}
+      >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="Map data &copy; OpenStreetMap contributors"
       />
       <Marker position={[51.505, -0.09]} />
-    </MapContainer>
+      </MapContainer>
   </>);
 
   // const [cont,] = useAppContext();
