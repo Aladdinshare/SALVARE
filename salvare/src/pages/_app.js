@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Sign from '../../components/Sign'
 import Footer from '../../components/Footer';
 
+// import '../../components/PopupContent.css'
+// import '../../components/WorkingContent.css'
+
 import '../styles/globals.css'
 
 export default function App({ Component, pageProps }) {
-  const [is_connect, setIs_connect] = useState(true);
-  const [chain_id, setChain_id] = useState(null);
 
   const [pageHeight, setPageHeight] = useState(0);
 
