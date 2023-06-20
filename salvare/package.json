@@ -1,6 +1,6 @@
 {
   "name": "salvare",
-  "homepage": "https://<GitHubアカウント名>.github.io/<GitHubリポジトリ名>/",
+  "homepage": "https://aladdinshare.github.io/SALVARE/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -47,7 +47,7 @@
     "redux": "^4.2.1",
     "web3modal": "^1.9.12"
   },
-  "scripts": {
+"scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "cp build/index.html build/404.html",
