@@ -1,5 +1,6 @@
 {
   "name": "salvare",
+  "homepage": "https://<GitHubアカウント名>.github.io/<GitHubリポジトリ名>/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -49,8 +50,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "cp build/index.html build/404.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
