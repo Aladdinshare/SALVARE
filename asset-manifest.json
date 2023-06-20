@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SALVARE/static/css/main.941b2bb0.css",
+    "main.js": "/SALVARE/static/js/main.dcd052ef.js",
+    "index.html": "/SALVARE/index.html",
+    "main.941b2bb0.css.map": "/SALVARE/static/css/main.941b2bb0.css.map",
+    "main.dcd052ef.js.map": "/SALVARE/static/js/main.dcd052ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.941b2bb0.css",
+    "static/js/main.dcd052ef.js"
+  ]
+}
