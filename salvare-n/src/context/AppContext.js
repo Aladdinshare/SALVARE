@@ -5,7 +5,8 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
     const [cont, setCont] = useState(null);
     const [is_connect, setIs_connect] = useState(true);
-    const [chain_id, setChain_id] = useState(null);
+  const [chain_id, setChain_id] = useState(null);
+  const [trashcans, setTrashcans] = useState(null);
 
     const initialContracts = () => {
         var { Contracts_MetaMask } = require('../contract/contracts')
@@ -22,7 +23,8 @@ const AppProvider = ({ children }) => {
      if (cont) {
        setChain_id(await cont.get_chain_id());
        setIs_connect(await cont.isMetaMaskConnected());
-    //    console.log(await cont.getTrashCans(),"AppContext")
+       setTrashcans(await cont.getTrashCans())
+      //  console.log(await cont.getTrashCans())
     }
     }
 
